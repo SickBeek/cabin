@@ -1,0 +1,10 @@
+#Editors
+.vscode/*
+
+#Executables
+*.exe
+*.out
+*.app
+
+#GDB
+*.o
