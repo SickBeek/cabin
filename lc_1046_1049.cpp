@@ -21,7 +21,7 @@ class Solution{
 			idx=0;
             if (stones[s-2]<stones[s-1]){
                 diff=stones[s-1]-stones[s-2]; //new weight
-                cout<<diff<<endl;
+                //cout<<diff<<endl;
                 for (i=0;i<s-2;i++){
                     if (diff<=stones[i]){
                         idx=i;
@@ -45,10 +45,12 @@ class Solution{
 		}
 
 		half=sum/2;
-		vector<int> dd(half, 0);
+		vector<int> dd(half+1, 0);
 		for (i=0;i<stones.size();i++){
 			for (j=half;j>=stones[i];j--){   //if stone[i]>half, skip
 				dd[j]=max(dd[j], dd[j-stones[i]]+stones[i]);
+				if (i==stones.size()-1)
+					break;
 			}
 		}
 		return sum-dd[half]-dd[half];
@@ -57,8 +59,8 @@ class Solution{
 
 int main (){
 	Solution sol;
-	vector<int> stones={1,2,1,7,8,4};
+	vector<int> stones={1,2,36,22};
 
-	cout<<sol.lastStoneWeight(stones)<<endl;
+	cout<<sol.lastStoneWeight_arbitrary(stones)<<endl;
 	return 0;
 }
