@@ -32,7 +32,7 @@ class Solution{
 			count++;
 			return;
 		}
-		
+
 		for (int i=0;i<5;i++){
 			if (path.size()>0){
 				switch (path.back()){
