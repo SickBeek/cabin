@@ -1,3 +1,13 @@
+public class Main {
+	public static void main (String []args){
+		int i=0;
+		switch (i){
+			case 1 : System.out.println("fxxk you");
+			case 2 : System.out.println("not fxxk you");
+		}
+	}
+}
+
 class Solution{
     public int climbStairs(int []coins, int amount){
             int i, j;
@@ -15,4 +25,13 @@ class Solution{
             }
             return dd[amount];
         }
+
+    public void test(){
+        int i=0;
+
+        switch (i){
+            case 0: i=1;
+            case 1: i=2;
+        }
+    }
 }
